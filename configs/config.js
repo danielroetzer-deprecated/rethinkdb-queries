@@ -3,10 +3,19 @@
  */
 
 module.exports = {
-    rethinkdb: {
+    promiseDb: {
         host: 'localhost',
         port: 28015,
-        db: 'rethinkdb_queries',
+        db: 'rethinkdb_queries_promises',
+        user: 'admin',
+        password: '',
+        timeout: 20,
+        ssl: null
+    },
+    callbackDb: {
+        host: 'localhost',
+        port: 28015,
+        db: 'rethinkdb_queries_callbacks',
         user: 'admin',
         password: '',
         timeout: 20,

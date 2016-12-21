@@ -2,13 +2,26 @@
  * Created by Dani on 20.12.2016.
  */
 
-//Load database queries
-db = require('./models/db');
+//Load logger
+//const logger = require('./configs/winston');
+
+//Database queries using promises
+pQ = require('./models/promiseQueries');
+
+pQ.connectToDatabase();
+
+pQ.createDatabase();
 
 
-//db.connectionUsingPromises();
-//db.connectionUsingCallbackFunction();
+for (let i=0;i<4;i++){
+    pQ.createTable('table_'+i);
+}
 
 
-db.createDatabase();
-//db.createDatabase2();
+
+
+
+
+
+//Database queries using callback functions
+cQ = require('./models/callbackQueries');

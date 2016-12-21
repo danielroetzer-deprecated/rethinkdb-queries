@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/danielroetzer/rethinkdb-queries#readme",
   "dependencies": {
-    "rethinkdb": "^2.3.3"
+    "rethinkdb": "^2.3.3",
+    "winston": "^2.3.0"
   }
 }
